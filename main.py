@@ -1,10 +1,11 @@
+from runtime_config import required_env
 import telebot
 from telebot import types
 import csv
 import datetime
 import time
 
-bot = telebot.TeleBot("6290776101:AAEsU7xSYtxu2zWeGqjfh3wJ06tr9RPaiYA")
+bot = telebot.TeleBot(required_env("TELEGRAM_BOT_TOKEN"))
 
 users_data = {}
 
