@@ -1,3 +1,4 @@
+from runtime_config import required_env
 import telebot
 from telebot import types
 import csv
@@ -10,7 +11,7 @@ from requests.exceptions import RequestException
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-bot = telebot.TeleBot("6290776101:AAEsU7xSYtxu2zWeGqjfh3wJ06tr9RPaiYA")
+bot = telebot.TeleBot(required_env("TELEGRAM_BOT_TOKEN"))
 
 
 class UserDataManager:
